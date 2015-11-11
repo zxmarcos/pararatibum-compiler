@@ -1,0 +1,35 @@
+# =====================================================
+# calcula o fatorial por iterações
+# =====================================================
+^menino fatorial(^menino joel)
+{
+    ^menino fat := 1;
+    ^menino n := 1;
+    ^pedindo_mais (n <= joel) {
+        fat := fat * n;
+        n := n + 1;
+    }
+    ^senta fat;
+}
+
+
+^menino fatorial_r(^menino joel)
+{
+    ^parara (joel < 2) {
+        ^senta 1;
+    } ^tibum {
+        ^senta fatorial_r(joel - 1) * joel;
+    }
+}
+
+@agora_eu_vou()
+{
+    ^menino num;
+    ^mostrar("Digite o numero: ");
+    ^mexer_com(num);
+    ^menino fat := fatorial_r(num);
+    ^mostrar("O fatorial de ");
+    ^mostrar(num);
+    ^mostrar(" e ");
+    ^mostrar(fat);
+}

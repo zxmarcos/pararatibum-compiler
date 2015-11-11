@@ -1,0 +1,42 @@
+# 
+^menino e_primo(^menino n)
+{
+    ^parara (n = 0) {
+        ^senta ^faz;
+    }
+    ^menino i := n - 1;
+    ^menino primo := ^esqueca;
+    ^pedindo_mais (i > 1) {
+        ^parara ((n % i) = 0) {
+            primo := ^faz;
+        }
+        i := i - 1;
+    }
+    ^senta primo;
+}
+
+@agora_eu_vou()
+{
+    ^novinha nome := "";
+    ^mostrar("Qual seu nome? ");
+    ^mexer_com(nome);
+    ^mostrar("Seu nome e ");
+    ^mostrar(nome);
+    ^mostrar("\nBem vindo aos numeros primos\n");
+
+    ^pedindo_mais (^esqueca) {
+
+        
+        ^mostrar("Entre com um numero: ");
+        ^menino num := 0;
+        ^mexer_com(num);
+    
+        ^parara (e_primo(num)) {
+            ^mostrar(num);
+            ^mostrar(" e um numero primo\n");
+        } ^tibum {
+            ^mostrar("nao e primo\n");
+        }
+
+    }
+}
