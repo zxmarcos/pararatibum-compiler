@@ -1,5 +1,5 @@
 # pararatibum-compiler
-Compilador para a linguagem PararaTibum, gera código C e Bytecode para JVM
+Compilador para a linguagem PararaTibum, gera código C++ e Bytecode para JVM
 
 Projeto desenvolvido como trabalho para a disciplina de compiladores, na FEMA/IMESA, 2015.
 O bytecode gerado deve ser compilado com o Jasmin.
